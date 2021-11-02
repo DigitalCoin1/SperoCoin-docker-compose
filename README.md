@@ -29,10 +29,18 @@ rpcallowip=* #Ips permitidos para chamadas e conexões RPC
 staking=0 #(0 = desabilitado, 1 = habilitado)
 ```
 
-### 3) Execute o comando para a criação da imagem e container:
+### 3) Execute o comando para a criação da rede, imagem e container:
 
 ```sh
+docker network create custom
 docker-compose up -d
+```
+
+### 4) Para parar o container, envie os comandos:
+
+```sh
+docker-compose exec sperocoin_ubuntu_1804 SperoCoind -datadir=/coin/data -conf=/coin/sperocoin.conf stop
+docker-compose stop
 ```
 
 [Docker]: <https://docs.docker.com/get-docker>

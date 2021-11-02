@@ -17,7 +17,7 @@ services:
     expose:
       - "55680"
     networks:
-     - default
+     - custom
 networks:
-  default:
+  custom:
       external: true

@@ -10,6 +10,13 @@
 ./data/txleveldb
 ./data/blk0001.dat
 ```
+*Observação: Se você possuir um arquivo wallet.dat, adicione-o também dentro desta pasta, ficando:
+
+```sh
+./data/txleveldb
+./data/blk0001.dat
+./data/wallet.dat
+```
 
 ### 2) Edite o arquivo sperocoin.conf alterando o nome de usuário e senha RPC, além das portas de comunicação e IP's aceitáveis para a conexão externa.
 

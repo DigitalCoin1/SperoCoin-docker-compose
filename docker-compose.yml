@@ -1,0 +1,23 @@
+version: '3.4'
+
+services:
+  #=============================================================================
+  #                                  SPEROCOIN
+  #=============================================================================
+  sperocoin_ubuntu_1604:
+    build: .
+    restart: always
+    image: sperocoin:ubuntu_1604
+    container_name: sperocoin_ubuntu_1604
+    volumes:
+      - ./data:/coin/data:rw
+    tty: true
+    ports:
+      - 55680:55680
+    expose:
+      - "55680"
+    networks:
+     - default
+networks:
+  default:
+      external: true

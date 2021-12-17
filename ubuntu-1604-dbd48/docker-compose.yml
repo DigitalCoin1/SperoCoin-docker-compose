@@ -1,0 +1,25 @@
+version: '3.4'
+
+services:
+  #=============================================================================
+  #     SPEROCOIN VERSION 2.7.0.2 - LIBDB 4.8(NEW VERSION!)
+  #=============================================================================
+  sperocoin_ubuntu_1604_libdb48:
+    build: .
+    restart: always
+    image: sperocoin:ubuntu_1604_libdb48
+    container_name: sperocoin_ubuntu_1604_libdb48
+    volumes:
+      - ./data:/coin/data:rw
+    tty: true
+    ports:
+      - 55680:55680
+      - 55681:55681
+    expose:
+      - "55680"
+      - "55681"
+    networks:
+     - custom
+networks:
+  custom:
+      external: true
